@@ -12,7 +12,7 @@ to_number = 0;
 
 function preload()
 {
-  apple = loadImage("apple.png");
+  apple = loadImage("hydrapple.png");
 }
 
 var SpeechRecognition = window.webkitSpeechRecognition;
@@ -35,7 +35,7 @@ recognition.onresult = function(event) {
     to_number = Number(content);
     if(Number.isInteger(to_number))
     {
-      document.getElementById("status").innerHTML = "Started drawing apple "; 
+      document.getElementById("status").innerHTML = "Started drawing very normal apple "; 
       draw_apple = "set";
     }
     else
@@ -60,10 +60,10 @@ function draw() {
     {
       x = Math.floor(Math.random() * 1600);
       y = Math.floor(Math.random() * 514 );
-      image(apple, x, y, 50, 50);
+      image(apple, x, y, 100, 100);
     }
-    document.getElementById("status").innerHTML = to_number + " Apples drawn";
-    speak_data = to_number + "Apples drawn";
+    document.getElementById("status").innerHTML = to_number + " Normal Apples drawn";
+    speak_data = to_number + "Normal Apples drawn";
     speak();
     draw_apple = "";
   }
